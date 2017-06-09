@@ -1,8 +1,0 @@
----
-- hosts: all
-  name: Change Password Root
-  vars:
-    passwd: new_password
-  tasks:
-  - name: Change Root Password
-    user: name=root update_password=always password={{passwd|password_hash('sha512')}}
